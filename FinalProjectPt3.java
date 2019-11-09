@@ -54,32 +54,32 @@ public class part3 {
                   	  uin = kb.nextInt();
                       switch (uin) {
           	        	case (1): {
-							// Query #1
-	       	   	            ExecQuery1(con);
-          	                break;
+					// Query #1
+	       	   	        	ExecQuery1(con);
+          	                	break;
           	        	}
           	        	case (2): {
-							// Query #2
-							// Note: Recommended ID to use for grading is 587170
+					// Query #2
+					// Note: Recommended ID to use for grading is 587170
           	        		System.out.println("Enter the Land Buyer ID:\n");
           	        		String id = kb.next();
           	        		ExecQuery2(con, id);
-       	   	            	break;
+       	   	            		break;
           	        	}
           	        	case (3): {
-							// Query #6
-							ExecQuery6(con);
-							break;
+					// Query #6
+					ExecQuery6(con);
+					break;
           	        	}
           	        	case (4): {
-							// Query #7
-							ExecQuery7(con);
-							break;
+					// Query #7
+					ExecQuery7(con);
+					break;
           	        	}
           	        	case(5): {
-							// Query #10
-							ExecQuery10(con);
-							break;
+					// Query #10
+					ExecQuery10(con);
+					break;
           	        	}
                   	}
                }
@@ -112,7 +112,7 @@ public class part3 {
 			// Purpose: Execution of Query 1.
 			// Parameters: Connection con
 			//			   - allows for access to the prepareStatement() 
-			//				 and executeQuery() methods.
+			//			     and executeQuery() methods.
 			String query = "";
 			query = "select distinct r.rname, r.rid\n" + 
 	                 		"from realtor r join buyer b on r.rid = b.rid\n" + 
@@ -135,7 +135,7 @@ public class part3 {
 			// Purpose: Execution of Query 2.
 			// Parameters: Connection con
 			//			   - allows for access to the prepareStatement() 
-			//				 and executeQuery() methods.
+			//			     and executeQuery() methods.
 			//			   String id
 			//			   - takes in a user chosen ID to search the data by.
 			String query = "";
@@ -160,7 +160,7 @@ public class part3 {
 			// Purpose: Execution of Query 6.
 			// Parameters: Connection con
 			//			   - allows for access to the prepareStatement() 
-			//				 and executeQuery() methods.
+			//			     and executeQuery() methods.
 			String query = "";
 			query = "select distinct r.rid, r.rname " + 
 					"from realtor r, client c, transaction t join partake p on t.tid = p.tid " +
